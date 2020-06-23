@@ -22,11 +22,20 @@
 			});
 		</script>
 	</head>
-	<body>
-		<div id="row1" class="row">
+	<style>
+    iframe{
+        width: 100%;
+        border: 2px solid #ccc;
+    }
+</style>
+</head>
+<body>
+    <div id="row1" class="row">
 			<div class="col-md-4">
+				<iframe src="/examples/html/table-layout.php<iframe type="text/html" frameborder="0" width="533" height="300" src="//video.nest.com/embedded/live/hsASO94jrE?autoplay=1" allowfullscreen></iframe>" id="myIframe"></iframe>
 			</div>
 			<div class="col-md-4">
+				<iframe type="text/html" frameborder="0" width="533" height="300" src="//video.nest.com/embedded/live/cU5Se4WrEj?autoplay=1" allowfullscreen></iframe>
 			</div>
 			<div class="col-md-4">
 			</div>
@@ -39,6 +48,15 @@
 			<div class="col-md-4">
 			</div>
 		</div>
-
-	</body>
+    
+	<script>
+    // Selecting the iframe element
+    var iframe = document.getElementById("myIframe");
+    
+    // Adjusting the iframe height onload event
+    iframe.onload = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+	</script>
+</body>
 </html>
